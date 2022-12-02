@@ -41,7 +41,7 @@ export default function BasicTable() {
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
-          <TableRow style={{backgroundColor:'black', color: 'white',}}>
+          <TableRow style={{backgroundColor:'yellow', color: 'white',}}>
             <TableCell>Estação 1 - EPCs</TableCell>
             <TableCell align="right">Antena</TableCell>
             <TableCell align="right">EPC</TableCell>
@@ -72,7 +72,7 @@ export default function BasicTable() {
     <TableContainer component={Paper}>
     <Table sx={{ minWidth: 650 }} aria-label="simple table">
       <TableHead>
-        <TableRow style={{backgroundColor:'black', color: 'white',}}>
+        <TableRow style={{backgroundColor:'yellow', color: 'white',}}>
           <TableCell>Estação 2 - EPCs</TableCell>
           <TableCell align="right">Antena</TableCell>
           <TableCell align="right">EPC</TableCell>
@@ -103,7 +103,7 @@ export default function BasicTable() {
   <TableContainer component={Paper}>
   <Table sx={{ minWidth: 650 }} aria-label="simple table">
     <TableHead>
-      <TableRow style={{backgroundColor:'black', color: 'white',}}>
+      <TableRow style={{backgroundColor:'yellow', color: 'white',}}>
         <TableCell>Estação 3 - EPCs</TableCell>
         <TableCell align="right">Antena</TableCell>
         <TableCell align="right">EPC</TableCell>
@@ -134,7 +134,7 @@ export default function BasicTable() {
 <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
-          <TableRow style={{backgroundColor:'black', color: 'white',}}>
+          <TableRow style={{backgroundColor:'yellow', color: 'white',}}>
             <TableCell>Estação 4 - EPCs</TableCell>
             <TableCell align="right">Antena</TableCell>
             <TableCell align="right">EPC</TableCell>
