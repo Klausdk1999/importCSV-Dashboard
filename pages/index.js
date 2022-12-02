@@ -12,7 +12,8 @@ export default function Home() {
     fetcher
   );
   console.log(data);
-  
+  console.log(data.rows[0]);
+  console.log(data.rows[0].antenaName);
   //if (error) return <div>Failed to load data</div>
   //if (!data) return ();
 
@@ -24,7 +25,7 @@ export default function Home() {
       {data ? 
        ( 
         <div> 
-          {data[0]}
+          {data.rows[0].antenaName}
         </div> )
         : 
         (
