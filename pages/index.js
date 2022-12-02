@@ -29,7 +29,7 @@ export default function Home() {
         : 
         (
         <Stack direction="column" justifyContent="center" alignItems="center" spacing={3}> 
-          Loading ...
+          No data yet ...
         </Stack>
         )
       }
