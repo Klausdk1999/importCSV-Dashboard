@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css'
 import UseCSV from "@usecsv/react";
 import useSWR from 'swr';
 import { Stack } from '@mui/system';
-
+import BasicTable from '../components/table'
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Home() {
@@ -22,7 +22,9 @@ export default function Home() {
       <Head>
         <title>Example UseCSV Project</title>
       </Head>
-      {data ? 
+      <BasicTable></BasicTable>
+
+      {/* {data ? 
        ( 
         <div> 
           {data.rows[0].antenaName}
@@ -33,7 +35,7 @@ export default function Home() {
           No data yet ...
         </Stack>
         )
-      }
+      } */}
       
       <main className={styles.main}>
         <UseCSV importerKey="852a58b9-44d5-45fd-ae2d-def76722ddb3" user={{ userId: "Klaus" }}>
