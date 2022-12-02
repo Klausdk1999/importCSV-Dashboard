@@ -11,7 +11,7 @@ export default function Home() {
     "/api/csv",
     fetcher
   );
-  
+  console.log(data);
   
   //if (error) return <div>Failed to load data</div>
   //if (!data) return ();
@@ -24,7 +24,7 @@ export default function Home() {
       {data ? 
        ( 
         <div> 
-          {data} 
+          {data[0].antenaName} ,  {data[0].tagCode} , {data[0].tagTimeStamp}
         </div> )
         : 
         (
