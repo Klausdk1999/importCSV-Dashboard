@@ -37,6 +37,7 @@ for(let  i = 0; i < rows.length; i++){
 
 export default function BasicTable() {
   return (
+  <>
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
@@ -67,10 +68,74 @@ export default function BasicTable() {
           ))}
         </TableBody>
       </Table>
+    </TableContainer>
+    <TableContainer component={Paper}>
+    <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <TableHead>
+        <TableRow>
+          <TableCell>Estação 2 - EPCs</TableCell>
+          <TableCell align="right">Antena</TableCell>
+          <TableCell align="right">EPC</TableCell>
+          <TableCell align="right">Numero de leituras</TableCell>
+          <TableCell align="right">tagRSSI</TableCell>
+          <TableCell align="right">Ultíma leitura</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {rowsAntenna2.map((row) => (
+          <TableRow
+            key={row.tagCode}
+            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+          >
+            <TableCell component="th" scope="row">
+              {row.tagCode}
+            </TableCell>
+            <TableCell align="right">{row.antenaName}</TableCell>
+            <TableCell align="right">{row.tagCode}</TableCell>
+            <TableCell align="right">{row.readCount}</TableCell>
+            <TableCell align="right">{row.tagRSSI}</TableCell>
+            <TableCell align="right">{row.tagTimeStamp}</TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  </TableContainer>
+  <TableContainer component={Paper}>
+  <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <TableHead>
+      <TableRow>
+        <TableCell>Estação 3 - EPCs</TableCell>
+        <TableCell align="right">Antena</TableCell>
+        <TableCell align="right">EPC</TableCell>
+        <TableCell align="right">Numero de leituras</TableCell>
+        <TableCell align="right">tagRSSI</TableCell>
+        <TableCell align="right">Ultíma leitura</TableCell>
+      </TableRow>
+    </TableHead>
+    <TableBody>
+      {rowsAntenna3.map((row) => (
+        <TableRow
+          key={row.tagCode}
+          sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+        >
+          <TableCell component="th" scope="row">
+            {row.tagCode}
+          </TableCell>
+          <TableCell align="right">{row.antenaName}</TableCell>
+          <TableCell align="right">{row.tagCode}</TableCell>
+          <TableCell align="right">{row.readCount}</TableCell>
+          <TableCell align="right">{row.tagRSSI}</TableCell>
+          <TableCell align="right">{row.tagTimeStamp}</TableCell>
+        </TableRow>
+      ))}
+    </TableBody>
+  </Table>
+</TableContainer>
+<TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Caixa - EPC</TableCell>
+            <TableCell>Estação 4 - EPCs</TableCell>
             <TableCell align="right">Antena</TableCell>
             <TableCell align="right">EPC</TableCell>
             <TableCell align="right">Numero de leituras</TableCell>
@@ -79,7 +144,7 @@ export default function BasicTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {rowsAntenna4.map((row) => (
             <TableRow
               key={row.tagCode}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -97,5 +162,6 @@ export default function BasicTable() {
         </TableBody>
       </Table>
     </TableContainer>
+    </>
   );
 }
