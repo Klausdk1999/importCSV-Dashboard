@@ -21,10 +21,10 @@ export default function Home() {
       <Head>
         <title>Example UseCSV Project</title>
       </Head>
-      {data.antenaName ? 
+      {data ? 
        ( 
         <div> 
-          {data[0].antenaName} ,  {data[0].tagCode} , {data[0].tagTimeStamp}
+          {data[0]}
         </div> )
         : 
         (
