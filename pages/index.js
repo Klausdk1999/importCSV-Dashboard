@@ -8,7 +8,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Home() {
   const { data, error } = useSWR(
-    "/api/data",
+    "/api/csv",
     fetcher
   );
   
