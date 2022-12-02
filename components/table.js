@@ -26,13 +26,13 @@ export default function BasicTable() {
         <TableHead>
           <TableRow>
             <TableCell>Caixa - EPC</TableCell>
-            <TableCell align="right">readerName</TableCell>
-            <TableCell align="right">antenaName</TableCell>
+            <TableCell align="right">Leitor</TableCell>
+            <TableCell align="right">Antena</TableCell>
             <TableCell align="right">readerSpaceAlias</TableCell>
-            <TableCell align="right">tagCode</TableCell>
-            <TableCell align="right">readCount</TableCell>
+            <TableCell align="right">EPC</TableCell>
+            <TableCell align="right">Numero de leituras</TableCell>
             <TableCell align="right">tagRSSI</TableCell>
-            <TableCell align="right">tagTimeStamp</TableCell>
+            <TableCell align="right">Ultíma leitura</TableCell>
             <TableCell align="right">tagMem</TableCell>
             <TableCell align="right">zone</TableCell>
           </TableRow>
