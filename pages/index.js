@@ -4,24 +4,48 @@ import UseCSV from "@usecsv/react";
 import useSWR from 'swr';
 import { Stack } from '@mui/system';
 import BasicTable from '../components/table'
+
+import { Chart } from "react-google-charts";
+
+export const data = [
+  ["Estação", "Quantidade"],
+  ["Estação 1", 3],
+  ["Estação 2", 6],
+  ["Estação 3", 4],
+  ["Estação 4", 8]
+];
+
+export const options = {
+  title: "Caixas por estação",
+};
+
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Home() {
-  const { data, error } = useSWR(
-    "/api/csv",
-    fetcher
-  );
-  console.log(data);
+  // const { data, error } = useSWR(
+  //   "/api/csv",
+  //   fetcher
+  // );
+  // console.log(data);
   //if (error) return <div>Failed to load data</div>
   //if (!data) return ();
-
+  
+  
   return (
     <div className={styles.container}>
       <Head>
         <title>Example UseCSV Project</title>
       </Head>
-      <BasicTable></BasicTable>
 
+      <Chart
+        chartType="PieChart"
+        data={data}
+        options={options}
+        width={"100%"}
+        height={"400px"}
+      />
+      <BasicTable></BasicTable>
+     
       {/* {data ? 
        ( 
         <div> 

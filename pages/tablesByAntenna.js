@@ -6,6 +6,11 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Chart } from "react-google-charts";
+
+const options = {
+  title: "Caixas por estação",
+};
 
 function createData(readerName,antenaName,readerSpaceAlias,tagCode,readCount,tagRSSI,tagTimeStamp,tagMem,zone) {
   return { readerName,antenaName,readerSpaceAlias,tagCode,readCount,tagRSSI,tagTimeStamp,tagMem,zone};
@@ -34,10 +39,24 @@ for(let  i = 0; i < rows.length; i++){
   if (rows[i].antenaName == "Antenna4" ) rowsAntenna4.push(rows[i]);
 }
 
+let data = [
+  ["Estação", "Quantidade"],
+  ["Estação 1", rowsAntenna1.length],
+  ["Estação 2", rowsAntenna2.length],
+  ["Estação 3", rowsAntenna3.length],
+  ["Estação 4", rowsAntenna4.length]
+];
 
 export default function BasicTable() {
   return (
   <>
+   <Chart
+        chartType="PieChart"
+        data={data}
+        options={options}
+        width={"100%"}
+        height={"400px"}
+    />
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
